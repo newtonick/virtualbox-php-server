@@ -17,7 +17,7 @@ VBoxManage createvm --name "$instancename" --register --ostype "Ubuntu_64" --bas
 # general modifications to vm instance
 VBoxManage modifyvm "$instancename" --memory 512 --vram 16 --acpi on --boot1 dvd --cpus 2 --accelerate3d off --nic1 bridged --bridgeadapter1 eth0 --clipboard bidirectional --monitorcount 1 --usb on
 
-cd $$instancename
+cd $instancename
 
 # create vm virtual hard drive
 VBoxManage createhd --filename "./$instancename.vdi" --size 8000
